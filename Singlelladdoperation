@@ -48,6 +48,17 @@ class LinkedList {
 		}
 
 	}
+	public void display()
+	{
+		Node temp = this.head;
+		while(temp != null)
+		{
+			System.out.println(temp.getData());
+			System.out.println(temp.getNext());
+			temp = temp.getNext();
+			System.out.println(temp);
+		}
+	}
 }
 
 class Tester{
@@ -58,5 +69,6 @@ class Tester{
 		list.addAtEnd("Munich");
 		list.addAtEnd("Vienna");
 		System.out.println("Adding an element to the linked list");
+		list.display();
 	}
 }
