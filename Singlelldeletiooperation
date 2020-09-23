@@ -153,6 +153,48 @@ class LinkedList {
 			}
 		}
 	}
+	
+//METHOD2 FOR DELETION 
+//	public void delete(String data)
+//	{
+//		if(head == null)
+//		  System.out.println("Sorry linked list is empty");
+//		else
+//		{
+//			Node node = findNode(data);
+//			if(node!=null)
+//			{
+//			    Node temp = this.head;
+//			    if(this.head.getData().equals(data))
+//			    {
+//				  this.head = this.head.getNext();
+//				  node.setNext(null);
+//				  if(node == this.tail)
+//					  this.tail = null;
+//			    }
+//			    else
+//			    {
+//			       while(temp!=null)
+//			        {
+//				        if(temp.getNext() == node)
+//				        {
+//					      temp.setNext(node.getNext());
+//					      if(node.getNext() == null)
+//						      this.tail = temp;
+//					      node.setNext(null);
+//					      break;
+//				         }   
+//				     temp = temp.getNext();
+//			        }
+//		        }
+//			}
+//			else
+//				System.out.println("No such element found");
+//	    }
+//	}
+
+
+
 
 	public static void main(String args[]) {
 		LinkedList list = new LinkedList();
