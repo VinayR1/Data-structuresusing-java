@@ -1,0 +1,186 @@
+package CollectionClasses;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class CollectionClasses {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		 List<String> srclist = new ArrayList<String>();  
+         List<String> destlist = new ArrayList<String>(); 
+         List<Integer> intlist = new ArrayList<Integer>(); 
+         //Populate two source and destination lists  
+         intlist.add(1);
+         intlist.add(5);
+         intlist.add(99);
+         intlist.add(3);
+         srclist.add("Vinay");  
+         srclist.add("vinith");  
+         srclist.add("raju");  
+         destlist.add("hi");  
+         destlist.add("hello");  
+         destlist.add("what");  
+         destlist.add("what do you want"); 
+         // copy into destination list  
+         System.out.println("Elements of int list: "+intlist);  
+         System.out.println("\n");
+         System.out.println("Elements of source list: "+srclist);  
+         System.out.println("\n");
+         System.out.println("Elements in destination before copying");
+         System.out.println("Elements of destination list: "+destlist); 
+         System.out.println("\n");
+         System.out.println("Rules for copying is the number of elements in the destination \nlist should be greater or equal to the sourcelist but the destination\nlist cannot contain lesser elements tahn the source elements please do check below example");
+         System.out.println("\n");
+         Collections.copy(destlist, srclist);
+         System.out.println("Elements in destination after copying");
+         System.out.println("Elements of destination list: "+destlist);  
+         System.out.println("\n \n");
+         
+         // finding the frequency
+         System.out.println("Finding no of occurances of the the element in the list ");
+         System.out.println("Occurence of Vinay in the srclist is " + Collections.frequency(srclist,"Vinay"));
+         System.out.println("\n \n");
+         
+      // finding the maximum
+         System.out.println("Finding maximum element in the list ");
+         System.out.println("Maximum for srclist " + Collections.max(srclist));
+         System.out.println("Maximum for intlist " + Collections.max(intlist));
+         System.out.println("\n \n");
+         
+      // finding the min element
+         System.out.println("Finding minimum element in the list ");
+         System.out.println("Maximum for srclist " + Collections.min(srclist));
+         System.out.println("Maximum for intlist " + Collections.min(intlist));
+         System.out.println("\n \n");
+       
+      // replacing the elements in the list
+         System.out.println("Replacing the element in the list we dont have replace we have replaceall ");
+         System.out.println("Elements in source before replacing" + srclist);
+         Collections.replaceAll(srclist, "Vinay", "Donda Vinay Kumar Reddy");
+         System.out.println("Elements of source after replacing list: " +srclist);
+         System.out.println("\n \n");
+         
+       // reversing the elements in the array
+         System.out.println("Reversing of the elements ");
+         System.out.println("Elements in destlist before reversing" + destlist);
+         Collections.reverse(destlist);
+         System.out.println("Elements of destlist after reversing the destlist: " +destlist);
+         System.out.println("\n \n");
+         
+         
+        // rotating the elements
+         System.out.println("Rotating of the elements ");
+         System.out.println("Elements in destlist before rotating " + destlist);
+         Collections.rotate(destlist, 2);
+         System.out.println("Elements of deslist after rotating 2 times of destlist: " +destlist);
+         System.out.println("\n \n");
+         
+         // shuffle the elements
+         System.out.println("Shuffling of the elements ");
+         System.out.println("Elements in destlist before shuffling " + destlist);
+         Collections.shuffle(destlist);
+         System.out.println("Elements of deslist after shuffling : " +destlist);
+         System.out.println("\n \n");
+         
+         // sorting the elements 
+         System.out.println("Sorting of the elements ");
+         System.out.println("Elements in destlist before sorting " + destlist);
+         Collections.sort(destlist);
+         System.out.println("Elements of deslist after sorting : " +destlist);
+         System.out.println("Elements in intlist before sorting " + intlist);
+         Collections.sort(intlist);
+         System.out.println("Elements of intlist after sorting : " +intlist);
+         System.out.println("\n \n");
+         
+         
+         // swapping of the given elements 
+         System.out.println("Elements in intlist before swapping " + intlist);
+         Collections.swap(intlist, 1, 2);
+         System.out.println("Elements of intlist after swapping  : " +intlist);
+         System.out.println("\n \n");
+         
+         
+         }  
+	
+	}
+
+
+OUTPUTS:
+
+Elements of int list: [1, 5, 99, 3]
+
+
+Elements of source list: [Vinay, vinith, raju]
+
+
+Elements in destination before copying
+Elements of destination list: [hi, hello, what, what do you want]
+
+
+Rules for copying is the number of elements in the destination 
+list should be greater or equal to the sourcelist but the destination
+list cannot contain lesser elements tahn the source elements please do check below example
+
+
+Elements in destination after copying
+Elements of destination list: [Vinay, vinith, raju, what do you want]
+
+ 
+
+Finding no of occurances of the the element in the list 
+Occurence of Vinay in the srclist is 1
+
+ 
+
+Finding maximum element in the list 
+Maximum for srclist vinith
+Maximum for intlist 99
+
+ 
+
+Finding minimum element in the list 
+Maximum for srclist Vinay
+Maximum for intlist 1
+
+ 
+
+Replacing the element in the list we dont have replace we have replaceall 
+Elements in source before replacing[Vinay, vinith, raju]
+Elements of source after replacing list: [Donda Vinay Kumar Reddy, vinith, raju]
+
+ 
+
+Reversing of the elements 
+Elements in destlist before reversing[Vinay, vinith, raju, what do you want]
+Elements of destlist after reversing the destlist: [what do you want, raju, vinith, Vinay]
+
+ 
+
+Rotating of the elements 
+Elements in destlist before rotating [what do you want, raju, vinith, Vinay]
+Elements of deslist after rotating 2 times of destlist: [vinith, Vinay, what do you want, raju]
+
+ 
+
+Shuffling of the elements 
+Elements in destlist before shuffling [vinith, Vinay, what do you want, raju]
+Elements of deslist after shuffling : [raju, vinith, what do you want, Vinay]
+
+ 
+
+Sorting of the elements 
+Elements in destlist before sorting [raju, vinith, what do you want, Vinay]
+Elements of deslist after sorting : [Vinay, raju, vinith, what do you want]
+Elements in intlist before sorting [1, 5, 99, 3]
+Elements of intlist after sorting : [1, 3, 5, 99]
+
+ 
+
+Elements in intlist before swapping [1, 3, 5, 99]
+Elements of intlist after swapping  : [1, 5, 3, 99]
+
+ 
+
