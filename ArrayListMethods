@@ -1,0 +1,142 @@
+package ArrayListMethods;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListMethods {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		List<String> stringlist1 = new  ArrayList<String>();
+		List<String> stringlist2 = new  ArrayList<String>();
+		List<String> stringlist3 = new  ArrayList<String>();
+		stringlist1.add("India");
+		stringlist1.add("USA");
+		stringlist1.add("Canada");
+		stringlist2.add("Australia");
+		stringlist2.add("Uk");
+		stringlist2.add("Europe");
+		stringlist3.add("England");
+		stringlist3.add("West indies");
+		stringlist3.add("Korea");
+		stringlist3.add("England");
+		
+		
+		System.out.println("Elements  in list1 " +stringlist1);
+		System.out.println("Elements  in list2 " +stringlist2);
+		System.out.println("Elements  in list3 " +stringlist3);
+		System.out.println("\n\n");
+		
+		
+		System.out.println("Adding the element at the particular position for stringlist1");
+		 System.out.println("Elements before adding the value into stringlist1 at index 3" + stringlist1);
+        stringlist1.add(3, "Newzeland");
+        System.out.println("Elements after adding the value into stringlist1 at index 3" + stringlist1);
+        System.out.println("\n\n");
+        
+        System.out.println("Adding the element at the last for stringlist2 ");
+        System.out.println("Elements before adding the value into stringlist2 at the last" + stringlist2);
+        stringlist2.add("Scotland");
+        System.out.println("Elements after adding the value into stringlist2 at the last" + stringlist2);
+        System.out.println("\n\n");
+        
+        System.out.println("Adding the whole collection at the last for stringlist2 ");
+        System.out.println("Elements before adding the collection stringlist1 into stringlist2 at the last" + stringlist2);
+        stringlist2.addAll(stringlist1);
+        System.out.println("Elements after adding the collection into stringlist2 at the last" + stringlist2);
+        System.out.println("\n\n");
+        
+
+        System.out.println("Adding the whole collection at the index position for stringlist1 ");
+        System.out.println("Elements before adding the collection stringlist1 into stringlist2 at the index position " + stringlist1);
+        stringlist1.addAll(2,stringlist3);
+        System.out.println("Elements after adding the collection into stringlist2 at the last" + stringlist1);
+        System.out.println("\n\n");
+		
+		
+		System.out.println("Getting elment at the index position");
+		System.out.println("finging the index of str 2 " +stringlist3.get(2));
+        System.out.println("\n\n");
+        
+        System.out.println("Getting the first occurence index position of element");
+		System.out.println("finging the first occurence index of collection in str3  " +stringlist3.indexOf("England"));
+        System.out.println("\n\n");
+        
+        System.out.println("Getting the last occurence index position of element");
+		System.out.println("finging the last occurence index of collection in str3  " +stringlist3.lastIndexOf("England"));
+        System.out.println("\n\n");
+        
+        System.out.println("Checking the whether the collection is empty");
+		System.out.println("Checking the whether the collection str3 is empty   " +stringlist3.isEmpty());
+        System.out.println("\n\n");
+        
+		
+        System.out.println("Setting the value at index position basically replacing ");
+        stringlist3.set(2,"Ireland");
+		System.out.println("After Setting the value at index position 2 of string 3 "+stringlist3);
+        System.out.println("\n\n");
+
+	}
+
+}
+
+
+OUTPUT 
+
+
+Elements  in list1 [India, USA, Canada]
+Elements  in list2 [Australia, Uk, Europe]
+Elements  in list3 [England, West indies, Korea, England]
+
+
+
+Adding the element at the particular position for stringlist1
+Elements before adding the value into stringlist1 at index 3[India, USA, Canada]
+Elements after adding the value into stringlist1 at index 3[India, USA, Canada, Newzeland]
+
+
+
+Adding the element at the last for stringlist2 
+Elements before adding the value into stringlist2 at the last[Australia, Uk, Europe]
+Elements after adding the value into stringlist2 at the last[Australia, Uk, Europe, Scotland]
+
+
+
+Adding the whole collection at the last for stringlist2 
+Elements before adding the collection stringlist1 into stringlist2 at the last[Australia, Uk, Europe, Scotland]
+Elements after adding the collection into stringlist2 at the last[Australia, Uk, Europe, Scotland, India, USA, Canada, Newzeland]
+
+
+
+Adding the whole collection at the index position for stringlist1 
+Elements before adding the collection stringlist1 into stringlist2 at the index position [India, USA, Canada, Newzeland]
+Elements after adding the collection into stringlist2 at the last[India, USA, England, West indies, Korea, England, Canada, Newzeland]
+
+
+
+Getting elment at the index position
+finging the index of str 2 Korea
+
+
+
+Getting the first occurence index position of element
+finging the first occurence index of collection in str3  0
+
+
+
+Getting the last occurence index position of element
+finging the last occurence index of collection in str3  3
+
+
+
+Checking the whether the collection is empty
+Checking the whether the collection str3 is empty   false
+
+
+
+Setting the value at index position basically replacing 
+After Setting the value at index position 2 of string 3 [England, West indies, Ireland, England]
+
+
+
