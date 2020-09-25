@@ -154,3 +154,69 @@ public class CollectionMethods {
 	
 
 }
+
+
+OUTPUT:
+ **********    COLLECTION INTERFACE METHODS   ***********    
+
+
+
+List1 after adding the elements [Vinay, Vinith, nikhil, Raju]  
+
+List2 after adding the elements [1, 2, 3, 4]  
+
+List3 after adding all the elements from list2 to list3 [1, 2, 3, 4]  
+
+List4 after adding all the elements [3, 4]  
+
+List4 after removing the elements which matches with list4 i.e, which are there in list4 [1, 2]  
+
+List3 after removing one element [1, 2, 3]  
+
+List4 after clearing it will remove all the elements in it []  
+
+List5 after adding all the elements [Vinay, Vinith, nikhil, Raju, bharath, sarath]  
+
+List5 after retaining the values that matched with elements in the list [Vinay, Vinith, nikhil, Raju]  
+
+Is list5 empty false
+Is list5 empty true
+
+
+Does list5 contains "Vinay" true
+Does list5 contains "Vinay Reddy" false
+Does list5 contains "Reddy" false
+
+
+Does list5 contains all elements of list6 in list5 true
+Does list6 contains all elements of list5 in list6 false
+Does list5 contains all elements of list in list5 true
+Does list contains all elements of list5 in list true
+
+
+List 5 size is 4
+List 6 size is 0
+List 2 size is 2
+
+
+Converted list5 into array
+Vinay
+Vinith
+nikhil
+Raju
+
+
+Converted array into list again
+[Vinay, Vinith, nikhil, Raju]
+
+
+Using of the iterator concept using iterator we can 
+iterate to each and every element evemthough  by using 
+for each loop we can iterate through entire list but if we want to 
+make any changes to the values of list we use iterator 
+ 
+ 
+Vinay
+Vinith
+nikhil
+Raju
