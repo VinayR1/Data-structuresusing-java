@@ -1,0 +1,156 @@
+package CollectionInterfaceMethods;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+public class CollectionMethods {
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<Integer> list2 = new ArrayList<Integer>();
+		ArrayList<Integer> list3 = new ArrayList<Integer>();
+		ArrayList<Integer> list4 = new ArrayList<Integer>();
+		ArrayList<String> list5 = new ArrayList<String>();
+		ArrayList<String> list6 = new ArrayList<String>();
+		List<Object> list7 = new ArrayList<Object>();
+		
+		// adding elements into list1
+		System.out.print("    **********    COLLECTION INTERFACE METHODS   ***********    \n\n\n\n");
+		list.add("Vinay");
+		list.add("Vinith");
+		list.add("nikhil");
+		list.add("Raju");
+		System.out.print("List1 after adding the elements ");
+		System.out.print(list + "  ");
+		System.out.println("\n");
+		
+		// adding elements into list 2
+		list2.add(1);
+		list2.add(2);
+		list2.add(3);
+		list2.add(4);
+		System.out.print("List2 after adding the elements ");
+		System.out.print(list2 + "  ");
+		System.out.println("\n");
+		
+		
+		// adding all elements from list 2 to list 3 and printing list 3 
+		
+        list3.addAll(list2);
+        System.out.print("List3 after adding all the elements from list2 to list3 ");
+        System.out.print(list3 + "  ");
+        System.out.println("\n");		
+		// adding elements into the list 
+		
+		list4.add(3);
+		list4.add(4);
+		System.out.print("List4 after adding all the elements ");
+        System.out.print(list4 + "  ");
+        System.out.println("\n");
+		
+		// we removed the elements from list2 collection and trying to print list2 .
+		
+		list2.removeAll(list4);
+		System.out.print("List4 after removing the elements which matches with list4 i.e, which are there in list4 ");
+		System.out.print(list2 + "  ");
+		System.out.println("\n");
+        
+		
+		// removing an single value in the list3 and priting 
+		
+		list3.remove(3);
+		System.out.print("List3 after removing one element ");
+		System.out.print(list3 + "  ");
+		System.out.println("\n");
+		
+		
+		// clearing the collection not just removing data from in it but clearing whole collecting
+		
+		list4.clear();
+		System.out.print("List4 after clearing it will remove all the elements in it ");
+		System.out.print(list4 + "  ");
+		System.out.println("\n");
+		
+		
+		// adding elements into list 5 
+		
+		list5.add("Vinay");
+		list5.add("Vinith");
+		list5.add("nikhil");
+		list5.add("Raju");
+		list5.add("bharath");
+		list5.add("sarath");
+		System.out.print("List5 after adding all the elements ");
+        System.out.print(list5 + "  ");
+        System.out.println("\n");
+		
+		// retainig the elements 
+		
+		list5.retainAll(list);
+		System.out.print("List5 after retaining the values that matched with elements in the list ");
+        System.out.print(list5 + "  ");
+        System.out.println("\n");
+		
+		
+		// checking if the list is is empty
+		
+		System.out.println("Is list5 empty " + list5.isEmpty());
+		System.out.println("Is list5 empty " + list6.isEmpty());
+		System.out.println("\n");
+		
+		
+		// checking whether the elements is present or not in the element
+		
+		System.out.println("Does list5 contains \"Vinay\" " + list5.contains("Vinay"));
+		System.out.println("Does list5 contains \"Vinay Reddy\" " + list5.contains("Vinay Reddy"));
+		System.out.println("Does list5 contains \"Reddy\" " + list5.contains("Reddy"));
+		System.out.println("\n");
+		
+		// checking whether each and every element in one collcetion present in another collection
+		
+		System.out.println("Does list5 contains all elements of list6 in list5 " + list5.containsAll(list6));
+		System.out.println("Does list6 contains all elements of list5 in list6 " + list6.containsAll(list5));
+		System.out.println("Does list5 contains all elements of list in list5 " + list5.containsAll(list));
+		System.out.println("Does list contains all elements of list5 in list " + list.containsAll(list5));
+		System.out.println("\n");
+		// the above print statement is true because eariler we used retained funtion.
+		
+		
+		// checking the size of the collection
+		System.out.println("List 5 size is " + list5.size());
+		System.out.println("List 6 size is " + list6.size());
+		System.out.println("List 2 size is " + list2.size());
+		System.out.println("\n");
+		
+		// converting array list into array
+		Object[] a = list5.toArray();
+		System.out.println("Converted list5 into array");
+		for(Object elements : a)
+			System.out.println(elements);
+		System.out.println("\n");
+		
+		
+		// converting the array into the list again 
+		list7 = Arrays.asList(a);
+		System.out.println("Converted array into list again");
+		System.out.println(list7);
+		System.out.println("\n");
+		
+		
+		// iterator 
+		Iterator<String> itr=list5.iterator(); 
+		System.out.println("Using of the iterator concept using iterator we can \niterate to each and every element evemthough  by using \nfor each loop we can iterate through entire list but if we want to \nmake any changes to the values of list we use iterator \n \n ");
+		while(itr.hasNext()){  
+		System.out.println(itr.next());  
+		}  
+		
+		
+		
+	}
+	
+
+}
